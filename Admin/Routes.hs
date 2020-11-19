@@ -1,7 +1,7 @@
-module Web.Routes where
+module Admin.Routes where
 import IHP.RouterPrelude
 import Generated.Types
-import Web.Types
+import Admin.Types
 
 -- Generator Marker
 instance AutoRoute StaticController
