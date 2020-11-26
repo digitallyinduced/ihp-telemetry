@@ -13,6 +13,9 @@ instance Controller EventsController where
         events <- query @Event
             |> orderBy #createdAt
             |> fetch
+
+        dailyActiveProjects <- sqlQuery "SELECT date, COUNT(distinct project_id) AS count FROM (SELECT date_trunc('day', events.created_at) AS date, project_id FROM events) AS events_with_date GROUP BY date" ()
+
         render IndexView { .. }
 
     action NewEventAction = do
