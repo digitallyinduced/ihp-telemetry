@@ -8,7 +8,7 @@ include ${IHP}/Makefile.dist
 
 CSS_FILES += ${IHP}/static/vendor/bootstrap.min.css
 CSS_FILES += ${IHP}/static/vendor/flatpickr.min.css
-CSS_FILES += ${IHP}/dygraph.css
+CSS_FILES += static/dygraph.css
 CSS_FILES += static/app.css
 
 JS_FILES += ${IHP}/static/vendor/jquery-3.2.1.slim.min.js
