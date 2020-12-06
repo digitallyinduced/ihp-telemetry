@@ -32,6 +32,7 @@ stylesheets = do
     when isDevelopment [hsx|
         <link rel="stylesheet" href="/vendor/bootstrap.min.css"/>
         <link rel="stylesheet" href="/vendor/flatpickr.min.css"/>
+        <link rel="stylesheet" href="/dygraph.css"/>
         <link rel="stylesheet" href="/app.css"/>
     |]
     when isProduction [hsx|
@@ -49,6 +50,8 @@ scripts = do
         <script src="/vendor/flatpickr.js"></script>
         <script src="/helpers.js"></script>
         <script src="/vendor/morphdom-umd.min.js"></script>
+        <script src="/dygraph.min.js"></script>
+        <script src="/charts.js"></script>
     |]
     when isProduction [hsx|
         <script src="/prod.js"></script>
