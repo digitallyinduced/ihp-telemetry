@@ -5,6 +5,7 @@ data IndexView = IndexView
     { events :: [Event]
     , dailyActiveProjects :: [(UTCTime, Int)]
     , weeklyActiveProjects :: [(UTCTime, Int)]
+    , monthlyActiveProjects :: [(UTCTime, Int)]
     , totalEventsOverTime :: [(UTCTime, Int)]
     , totalProjectsOverTime :: [(UTCTime, Int)]
     }
@@ -32,6 +33,16 @@ instance View IndexView where
                     style="height: 250px"
                 ></div>
                 {renderActiveProjects weeklyActiveProjects}
+            </div>
+            <div class="col">
+                <h2>Monthly Active Projects</h2>
+                <div
+                    id="monthly-active-projects"
+                    data-dates={map fst monthlyActiveProjects |> jsonDates}
+                    data-values={map snd monthlyActiveProjects |> jsonValues}
+                    style="height: 250px"
+                ></div>
+                {renderActiveProjects monthlyActiveProjects}
             </div>
             <div class="col">
                 <h2>Total Projects Over Time</h2>

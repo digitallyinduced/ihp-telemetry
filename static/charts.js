@@ -17,7 +17,7 @@ function initCharts() {
     });
 
 
-    $('#weekly-active-projects').each(function () {
+    $('#weekly-active-projects, #monthly-active-projects').each(function () {
         var dates = $(this).data('dates');
         var values = $(this).data('values');
 
