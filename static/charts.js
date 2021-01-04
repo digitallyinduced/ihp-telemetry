@@ -28,7 +28,7 @@ function initCharts() {
 
         var chart = new Dygraph(this, graphArray, {
                 labels: [ "Time", 'Daily Active Users' ],
-                valueRange: [0, 100],
+                valueRange: [0, 500],
                 drawGrid: true,
             },
         );
