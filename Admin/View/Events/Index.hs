@@ -14,7 +14,7 @@ instance View IndexView where
     html IndexView { .. } = [hsx|
         <h1>IHP Telemetry</h1>
         <div class="row">
-            <div class="col">
+            <div class="col-lg">
                 <h2>Daily Active Projects</h2>
                 <div
                     id="daily-active-projects"
@@ -24,7 +24,7 @@ instance View IndexView where
                 ></div>
                 {renderActiveProjects dailyActiveProjects}
             </div>
-            <div class="col">
+            <div class="col-lg">
                 <h2>Weekly Active Projects</h2>
                 <div
                     id="weekly-active-projects"
@@ -34,7 +34,7 @@ instance View IndexView where
                 ></div>
                 {renderActiveProjects weeklyActiveProjects}
             </div>
-            <div class="col">
+            <div class="col-lg">
                 <h2>Monthly Active Projects</h2>
                 <div
                     id="monthly-active-projects"
@@ -44,7 +44,7 @@ instance View IndexView where
                 ></div>
                 {renderActiveProjects monthlyActiveProjects}
             </div>
-            <div class="col">
+            <div class="col-lg">
                 <h2>Total Projects Over Time</h2>
                 <div
                     id="total-projects-over-time"
@@ -54,7 +54,7 @@ instance View IndexView where
                 ></div>
                 {renderActiveProjects totalProjectsOverTime}
             </div>
-            <div class="col">
+            <div class="col-lg">
                 <h2>Total Events Over Time</h2>
                 <div
                     id="total-events-over-time"
