@@ -65,20 +65,6 @@ instance View IndexView where
                 {renderActiveProjects totalEventsOverTime}
             </div>
         </div>
-        <div class="table-responsive table-sm table-hover">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>IHP Version</th>
-                        <th>OS</th>
-                        <th>Arch</th>
-                        <th>Project Id</th>
-                    </tr>
-                </thead>
-                <tbody>{forEach events renderEvent}</tbody>
-            </table>
-        </div>
     |]
 
 jsonValues :: [Int] -> Text
