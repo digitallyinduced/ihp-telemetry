@@ -62,8 +62,8 @@ metaTags :: Html
 metaTags = [hsx|
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta property="og:title" content="App"/>
+    <meta property="og:title" content="IHP Telemetry"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="TODO"/>
-    <meta property="og:description" content="TODO"/>
+    <meta property="og:url" content="https://ihp-telemetry.digitallyinduced.com/admin/Events"/>
+    <meta property="og:description" content="IHP Telemetry: Daily Active Projects, Weekly Active Projects, Monthly Active Projects, Total Projects Over Time, Total Events Over Time"/>
 |]

@@ -19,6 +19,10 @@ instance View AboutView where
         </ul>
 
         <p>
+            <a href="/admin/Events" class="btn btn-primary">Show me the data</a>
+        </p>
+
+        <p>
             (c) 2020, digitally induced GmbH
         </p>
     |]
