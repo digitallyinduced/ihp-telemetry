@@ -70,6 +70,23 @@ function initCharts() {
             },
         );
     });
+
+    $('#weekly-active-projects-per-os').each(function () {
+        var dates = $(this).data('dates');
+        var macosValues = $(this).data('macos-values');
+        var linuxValues = $(this).data('linux-values');
+        var windowsValues = $(this).data('windows-values');
+
+        function toYYYYMMDD(date) { return new Date(date).toISOString().split('T')[0]; }
+        var values = dates.map((date, i) => [new Date(date), macosValues[toYYYYMMDD(date)] || 0, linuxValues[toYYYYMMDD(date)] || 0, windowsValues[toYYYYMMDD(date)] || 0]);
+
+        var chart = new Dygraph(this, values, {
+                labels: [ "Time", 'MacOS', "Linux", "Windows" ],
+                drawGrid: true,
+            },
+        );
+    });
+
 };
 
 $(initCharts);
